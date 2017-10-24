@@ -1,0 +1,116 @@
+.wrapper-central-unit{
+  padding: 40px 44px 30px 44px;
+}
+
+.container-product{
+  width: 100%;
+  font-size: 0;
+}
+
+.block-product:nth-child(1n) {
+  margin-right: 1.5%;
+}
+
+.block-product:nth-child(2n) {
+  margin-left: 1.5%;
+  margin-right: 0;
+}
+
+.block-product:first-child{
+  box-shadow: none;
+  padding-right: 30px;
+  transition: all .2s ease-out;
+  background-image: none;
+  .wrapper-product{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    position: relative;
+    .central-text{
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+      color: #5e5e5e;
+    }
+  }
+  .central-title {
+    font-size: 0;
+    display: inline-block;
+    margin-bottom: 25px;
+    .central-title_txt{
+      @include display-inline-middle;
+      @include fontTTRoundsCondensedB;
+      font-size: 36px;
+      font-stretch: condensed;
+      line-height: 1.22;
+      text-align: left;
+      color: #000;
+      margin-right: 15px;
+    }
+    .central-title_icon{
+      @include display-inline-middle;
+      background: url(../img/svg/btn.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 19px;
+      height: 19px;
+      margin-top: 8px;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
+
+.block-product {
+  width: 48.5%;
+  display: inline-block;
+  vertical-align: top;
+  object-fit: contain;
+  margin-bottom: 29px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,.15);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 290px;
+  background-position: center right;
+  .wrapper-product{
+    width: 100%;
+    height: 100%;
+    padding: 27px 30px 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .wrapper-product_logo{
+      width: 108px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 66px;
+      position: absolute;
+      top: 40px;
+      left: 30px;
+    }
+    .wrapper-product_text{
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+      .wrapper-product_text-title{
+        font-size: 24px;
+        @include fontTTRoundsCondensedR;
+        font-stretch: condensed;
+        line-height: 1.17;
+        text-align: left;
+        color: #000;
+      }
+      .wrapper-product_text-txt{
+        @include fontTTRoundsCondensedR;
+        font-size: 16px;
+        font-stretch: condensed;
+        line-height: 1.5;
+        text-align: left;
+        color: #39b54a;
+        min-height: 24px;
+      }
+    }
+  }
+}
