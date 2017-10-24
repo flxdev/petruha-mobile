@@ -30,6 +30,14 @@ body{
   overflow-x: hidden;
 }
 
+h1{
+  @include fontTTRoundsCondensedB;
+  font-size: 60px;
+  font-stretch: condensed;
+  line-height: 1;
+  text-align: left;
+}
+
 .header{
   position: fixed;
   width: 100%;
@@ -565,6 +573,133 @@ body{
       font-size: 14px;
       text-align: left;
       color: #b5b3b3;
+    }
+  }
+}
+
+.container-header-bread-crumbs{
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+  height: 250px;
+  position: relative;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+  }
+  .wrapper-header-bread-crumbs {
+    padding: 40px 44px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .bread-crumbs {
+      a{
+        @include fontOpenSans300;
+        font-size: 14px;
+        text-align: left;
+        color: hsla(0,0%,100%,.8);
+        &:after{
+          content: "/";
+          padding-left: 4px;
+          @include fontOpenSans300;
+          font-size: 14px;
+          text-align: left;
+          color: hsla(0,0%,100%,.8);
+        }
+      }
+    }
+    h1{
+      color: #fff;
+      position: absolute;
+      left: 44px;
+      bottom: 68px;
+    }
+  }
+}
+
+.wrapper-search {
+  width: 100%;
+  position: relative;
+}
+
+.container-box-search {
+  width: 50%;
+  position: relative;
+  margin-bottom: 30px;
+  .input-box-search{
+    width: 100%;
+    border-radius: 2px;
+    font-family: Open Sans,sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 1.5;
+    border: 1px solid #b5b3b3;
+    padding: 9px 45px 9px 15px;
+  }
+  .btn-s{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    top: 0;
+    right: 0;
+    svg {
+      width: 45px;
+      height: 45px;
+      path{
+        fill: #5e5e5e;
+      }
+    }
+  }
+}
+
+.container-search-info{
+  @include fontOpenSans300;
+  font-size: 16px;
+  line-height: 1.88;
+  text-align: left;
+  color: #5e5e5e;
+  margin-bottom: 30px;
+  span{
+    @include fontOpenSans300;
+    font-weight: 600;
+    color: #000;
+  }
+}
+
+.container-search-list{
+  padding-left: 15px;
+  width: 70%;
+  ol{
+    list-style-type: decimal;
+    li{
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      text-align: left;
+      color: #5e5e5e;
+      border-bottom: 1px solid #cdcdcd;
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+      a{
+        color: #39b54a;
+        text-decoration: underline;
+        b{
+          @include fontOpenSans600;
+        }
+      }
+      .block-search-txt{
+        margin-top: 15px;
+        b{
+          @include fontOpenSans600;
+        }
+      }
     }
   }
 }

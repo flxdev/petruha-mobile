@@ -404,6 +404,24 @@ $units: 1px !default;
   .wrapper-small-block{
     width: 100%;
   }
+  h1{
+    font-size: 50px;
+  }
+  .container-header-bread-crumbs {
+    .wrapper-header-bread-crumbs{
+      padding: 30px 30px;
+      h1{
+        left: 30px;
+        bottom: 38px;
+      }
+    }
+  }
+  .container-box-search {
+    width: 100%;
+  }
+  .container-search-list{
+    width: 100%;
+  }
 }
 
 @media all and (max-width: 500px){
