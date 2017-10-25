@@ -703,3 +703,261 @@ h1{
     }
   }
 }
+
+.btn-green{
+  @include fontTTRoundsCondensedR;
+  font-size: 18px;
+  font-stretch: condensed;
+  line-height: 1;
+  text-align: left;
+  color: #fff;
+  border-radius: 30px;
+  background-color: #39b54a;
+  padding: 18px 40px 19px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.box-input {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  .form-label{
+    margin-bottom: 10px;
+    .input-label{
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: left;
+      color: #b5b3b3;
+    }
+  }
+  .form-input{
+    .input-box{
+      width: 100%;
+      border-radius: 2px;
+      border: 1px solid #b5b3b3;
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+      color: #000;
+      padding: 12px 15px;
+    }
+    .select2-container{
+      width: 100%!important;
+    }
+    .select2-container--default{
+      .select2-selection--single{
+        height: 50px;
+        border-radius: 2px;
+        .select2-selection__arrow{
+          top: 10px;
+        }
+        .select2-selection__rendered{
+          @include fontOpenSans300;
+          font-size: 16px;
+          padding-left: 15px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+}
+
+.box-dropzon-btn{
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  .wrapper-dropzone{
+    @include display-inline-top;
+    width: 50%;
+  }
+  .box-btn-form{
+    @include display-inline-top;
+    width: 50%;
+    text-align: right;
+  }
+}
+
+.btn-form{
+  @include fontTTRoundsCondensedR;
+  font-size: 18px;
+  font-stretch: condensed;
+  line-height: 1;
+  text-align: left;
+  color: #fff;
+  padding: 15px 40px 17px;
+  border-radius: 2px;
+  background-color: #39b54a;
+}
+
+.btn-form.radius {
+  border-radius: 30px;
+}
+
+.select2-dropdown{
+  border: none;
+  box-shadow: 0 5px 20px 0 rgba(0,0,0,.12);
+  margin: 0;
+  padding: 10px;
+}
+
+.select2-search--dropdown {
+  display: none;
+}
+
+.select2-container--default {
+  .select2-results__option{
+    @include fontOpenSans300;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: left;
+    color: #5e5e5e;
+  }
+  .select2-results__option--highlighted[aria-selected] {
+    background-color: inherit;
+    color: #5e5e5e;
+  }
+}
+
+.box-add-file {
+  .dz-message {
+    font-size: 0;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .icon-add-file{
+    width: 14px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  .txt-def-mes{
+    @include display-inline-middle;
+    line-height: 1.71;
+    color: #39b54a;
+    @include fontOpenSans300;
+    font-size: 14px;
+    text-align: left;
+  }
+  .dz-message_waring{
+    @include fontOpenSans300;
+    line-height: 1.71;
+    color: #b5b3b3;
+    margin-left: 24px;
+    margin-top: 17px;
+    width: 250px;
+    font-size: 14px;
+  }
+}
+
+.wrapper-dropzone{
+  .dz-preview{
+    position: relative;
+    width: 300px;
+  }
+  .dz-image{
+    display: none;
+  }
+  .dz-details{
+    float: left;
+    .dz-size{
+      float: right;
+      padding-top: 1px;
+    }
+    .dz-filename{
+      max-width: 210px;
+    }
+  }
+  .dz-remove{
+    margin-top: 8px;
+  }
+}
+
+.wrapper-dropzone .dz-error-mark, .wrapper-dropzone .dz-success-mark {
+  display: none;
+}
+
+.header-404{
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+.container-header-bread-crumbs{
+  .container-404{
+    h1{
+      position: relative;
+      text-align: center;
+      left: 0;
+      bottom: 0;
+      font-size: 90px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.container-404{
+  width: 100%;
+  text-align: center;
+  padding: 25px 15%;
+  p{
+    color: #fff;
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    margin-bottom: 40px;
+    a{
+      color: #39b54a;
+      text-decoration: underline;
+    }
+  }
+  .box-search{
+    position: relative;
+    .input-box-search{
+      background-color: transparent;
+      border-radius: 50px;
+      border: 1px solid #fff;
+      @include fontOpenSans300;
+      font-size: 16px;
+      line-height: 1.88;
+      color: #fff;
+      padding: 9px 50px 11px 22px;
+      text-align: left;
+      width: 85%;
+    }
+    .btn-s{
+      position: absolute;
+      width: 52px;
+      height: 52px;
+      right: 10%;
+      svg{
+        height: 46px;
+      }
+    }
+  }
+}
+
+.container-white-block{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+}
+
+.btn-close{
+  background-image: url(../img/svg/combined-shape-close.svg);
+  width: 26px;
+  height: 26px;
+  right: 52px;
+  object-fit: contain;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 34px;
+}

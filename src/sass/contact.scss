@@ -1,0 +1,225 @@
+.container-telephone-hotline-f{
+  width: 100%;
+  position: relative;
+  font-size: 0;
+  margin-bottom: 40px;
+  .block-btn{
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  .block-label-txt.telefon{
+    @include display-inline-top;
+    width: 48%;
+    .block-label{
+      margin-bottom: 5px;
+    }
+  }
+  .block-label{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #5e5e5e;
+  }
+  .block-telefon_txt{
+    @include fontTTRoundsCondensedB;
+    font-size: 28px;
+    font-stretch: condensed;
+    line-height: 1.29;
+    text-align: left;
+    color: #000;
+  }
+  .block-label-txt.email{
+    @include display-inline-top;
+    width: 52%;
+    .block-label{
+      margin-bottom: 12px;
+    }
+  }
+  .block-email_txt{
+    @include fontOpenSans300;
+    font-size: 16px;
+    line-height: 1.88;
+    text-align: left;
+    color: #39b54a;
+    text-decoration: underline;
+  }
+}
+
+.container-contact-row{
+  width: 100%;
+  font-size: 0;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  .wrapper-contact_big-title{
+    @include fontTTRoundsCondensedB;
+    font-size: 36px;
+    font-stretch: condensed;
+    line-height: 1.22;
+    text-align: left;
+    color: #000;
+    border-bottom: 1px solid #cdcdcd;
+    padding-bottom: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+.container-tabs-btn{
+  border-bottom: 1px solid #cdcdcd;
+  font-size: 0;
+  .tabs-link.current-t{
+    color: #000;
+    border-bottom: 3px solid #eb1c24;
+  }
+  .tabs-link{
+    @include display-inline-top;
+    @include fontTTRoundsCondensedR;
+    font-size: 16px;
+    font-stretch: condensed;
+    line-height: 3.8;
+    text-align: left;
+    color: #5e5e5e;
+    margin-bottom: -2px;
+    margin-right: 70px;
+    cursor: pointer;
+  }
+}
+
+.container-tabs-btn.row-tabs-company{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  margin-bottom: 70px;
+}
+
+.container-contact{
+  display: none;
+  opacity: 0;
+  .wrapper-white-feedback_form{
+    width: 100%;
+  }
+}
+
+.container-contact.current-t{
+  display: block;
+  opacity: 1;
+}
+
+.wrapper-white-feedback_form{
+  font-size: 0;
+  .box-input{
+    @include display-inline-top;
+    width: 48%;
+    margin-bottom: 30px;
+  }
+  .box-input:nth-child(1n){
+    margin-left: 0;
+    margin-right: 2%;
+  }
+  .box-input:nth-child(2n){
+    margin-left: 2%;
+    margin-right: 0;
+  }
+  .dz-preview{
+    margin-left: 24px;
+    margin-top: 17px;
+  }
+  .dz-details{
+    @include display-inline-middle;
+    margin-right: 15px;
+    font-size: 0;
+    .dz-size{
+      color: #b5b3b3;
+      @include display-inline-middle;
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: left;
+    }
+    .dz-filename{
+      @include display-inline-middle;
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 1.71;
+      text-align: left;
+      color: #797979;
+      margin-right: 15px;
+    }
+  }
+  .dz-remove{
+    @include display-inline-middle;
+    background-image: url(../img/svg/close-file.svg);
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 8px;
+  }
+}
+
+.box-input.textarea{
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 50px;
+  .textarea-box{
+    width: 100%;
+    height: 110px;
+    padding: 12px 15px;
+    @include fontOpenSans300;
+    font-size: 16px;
+    color: #000;
+    resize: none;
+  }
+}
+
+.wrapper-contact_list {
+  width: 50%;
+  margin-bottom: 52px;
+  @include display-inline-top;
+  .wrapper-contact_list-title{
+    @include fontTTRoundsCondensedR;
+    font-size: 24px;
+    font-stretch: condensed;
+    line-height: 1.5;
+    text-align: left;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  .wrapper-contact_block{
+    display: block;
+    .wrapper-contact_block-row{
+      font-size: 0;
+      .label{
+        @include display-inline-middle;
+        @include fontOpenSans300;
+        font-size: 14px;
+        text-align: left;
+        color: #b5b3b3;
+        width: 115px;
+      }
+      .text{
+        @include display-inline-middle;
+        .telefon{
+          @include fontOpenSans300;
+          font-size: 16px;
+          line-height: 2;
+          text-align: left;
+          color: #5e5e5e;
+        }
+        .email{
+          @include fontOpenSans300;
+          font-size: 16px;
+          line-height: 1.88;
+          text-align: left;
+          color: #39b54a;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
