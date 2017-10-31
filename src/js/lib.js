@@ -5,3 +5,5 @@
 //=include lib/select2.min.js
 
 //=include lib/dropzone.js
+
+//=include lib/slick.min.js

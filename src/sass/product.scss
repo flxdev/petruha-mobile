@@ -6,3 +6,212 @@
     }
   }
 }
+
+.container-stock {
+  font-size: 0;
+}
+
+.row-block{
+  width: 100%;
+  position: relative;
+  .block-text-outside{
+    display: inline-block;
+    vertical-align: top;
+    width: 32%;
+    margin-bottom: 55px;
+    .block-text-outside_img{
+      width: 100%;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      margin-bottom: 20px;
+      overflow: hidden;
+      .block-info_text-section{
+        @include fontTTRoundsCondensedB;
+        font-size: 14px;
+        font-stretch: condensed;
+        text-align: center;
+        color: #fff;
+        border-radius: 3px;
+        background-color: #eb1c24;
+        padding: 7px 29px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        text-transform: uppercase;
+        z-index: 2;
+      }
+    }
+    .block-text-outside_wrapper{
+      padding: 0 20px;
+      .block-text-outside_title{
+        @include fontTTRoundsCondensedR;
+        font-size: 24px;
+        font-stretch: condensed;
+        line-height: 1.5;
+        text-align: left;
+        color: #000;
+        margin-bottom: 5px;
+      }
+      .block-text-outside_txt{
+        @include fontOpenSans300;
+        font-size: 16px;
+        line-height: 1.88;
+        text-align: left;
+        color: #5e5e5e;
+        margin-bottom: 10px;
+      }
+      .block-text-outside_data{
+        @include fontOpenSans300;
+        font-size: 14px;
+        text-align: left;
+        color: #b5b3b3;
+
+      }
+    }
+  }
+  .block-text-outside:nth-child(3n+1){
+    margin-right: 1%;
+  }
+  .block-text-outside:nth-child(3n+2){
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+  .block-text-outside:nth-child(3n+3){
+    margin-left: 1%;
+  }
+}
+
+.container-navigation{
+  width: 100%;
+  position: relative;
+  padding-bottom: 115px;
+  overflow: hidden;
+}
+
+.wrapper-navigation{
+  text-align: center;
+  li{
+    @include display-inline-middle;
+    margin-right: 6px;
+    margin-left: 6px;
+    a{
+      padding: 7px;
+    }
+  }
+  .btn-prev{
+    width: 20px;
+    height: 20px;
+    transform: rotate(180deg);
+    margin-right: 42px;
+  }
+  .no-active{
+    .first{
+      fill: #b5b3b3;
+    }
+  }
+  .icon-btn-prev{
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding: 0;
+  }
+  .btn-next{
+    width: 20px;
+    height: 20px;
+    margin-left: 42px;
+  }
+  .icon-btn-next{
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding: 0;
+  }
+  .number{
+    a{
+      @include fontOpenSans300;
+      font-size: 20px;
+      color: #b5b3b3;
+      &:hover{
+        color: #eb1c24;
+      }
+    }
+  }
+  .active{
+    a{
+      @include fontOpenSans600;
+      font-size: 20px;
+      color: #eb1c24;
+    }
+  }
+  .interval{
+    @include fontOpenSans300;
+    font-size: 20px;
+    color: #b5b3b3;
+  }
+}
+
+.display-mobile-nav{
+  display: none;
+  font-size: 0;
+  border-top: 1px solid #cdcdcd;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 13px 0;
+  li{
+    @include display-inline-middle;
+  }
+  .btn-prev{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    .icon-btn-prev{
+      transform: rotate(-90deg);
+    }
+  }
+  .txt-nav{
+    @include fontOpenSans300;
+    font-size: 18px;
+    line-height: 1.67;
+    color: #5e5e5e;
+  }
+  .btn-next{
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    .icon-btn-next{
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+.container-sorting{
+  position: absolute;
+  top: 13px;
+  right: 0;
+  .txt-sorting{
+    @include fontOpenSans300;
+    font-size: 16px;
+    font-stretch: condensed;
+    text-align: left;
+    color: #000;
+    vertical-align: middle;
+    margin-right: 15px;
+  }
+  .select2-container {
+    .select2-selection--single{
+      height: 33px;
+    }
+  }
+  .select2-selection__rendered{
+    @include fontOpenSans300;
+    font-size: 16px;
+    font-stretch: condensed;
+    text-align: left;
+    color: #000!important;
+  }
+  .select-box{
+    width: 190px;
+  }
+}
