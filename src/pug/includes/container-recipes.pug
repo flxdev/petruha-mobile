@@ -1,0 +1,132 @@
+section.container-central-unit.gray
+    .wrapper-central-unit
+        .container-row
+            a(href='#').central-title
+                span.central-title_txt Рецепты
+                span.central-title_icon
+
+            .container-sorting
+                label.txt-sorting Сортировать:
+                select.select-box.select2
+                    option(value='1') По популярности
+                    option(value='2') По цене
+                    option(value='3') По рейтингу
+
+            .container-filter
+                .wrapper-filter
+                    .wrapper-filter-multiple
+                        span.wrapper-filter-title Фильтр:
+
+                        .block-filter
+                            .button-dropdown
+                                select(multiple="multiple1" placeholder="Ингредиенты" class="filter-sel" data-filter-txt="Ингредиенты: " data-number-filter=0)
+                                    option(value='Голень') Голень
+                                    option(value='Бедро') Бедро
+                                    option(value='Филе') Филе
+                                    option(value='Крыло') Крыло
+                                    option(value='Окорочка') Окорочка
+                                    option(value='Тушка') Тушка
+
+                                label.filter-clear
+                                    i
+
+                        .block-filter
+                            .button-dropdown
+                                select(multiple="multiple2" placeholder="Блюда" class="filter-sel" data-filter-txt="Блюда: " data-number-filter=1)
+                                    option(value='Блюда 1') Блюда 1
+                                    option(value='Блюда 2') Блюда 2
+                                    option(value='Блюда 3') Блюда 3
+                                    option(value='Блюда 4') Блюда 4
+                                    option(value='Блюда 5') Блюда 5
+
+                                label.filter-clear
+                                    i
+
+                        .button-reset-filter Очистить фильтр
+
+
+            .container-block-row.row-block
+                a(href='#').block-text-inside
+                    .wrapper-text-inside(style='background-image:url("img/recipe/Bitmap1.jpg")')
+                        .block-info_text-section КУРИНАЯ ГРУДКА
+                        .block-text-insides
+                            .block-text-inside_title САЛАТ
+                            .block-text-inside_txt из курицы и хурмы
+                    .block-text-inside_outside
+                        .block-text-inside_outside-time
+                            span.icon-time
+                            | 60 мин
+                        .block-text-inside_outside-servings
+                            span.icon-servings
+                            | 2 порции
+
+                a(href='#').block-text-inside
+                    .wrapper-text-inside(style='background-image:url("img/recipe/Bitmap2.jpg")')
+                        .block-info_text-section МЯКОТЬ БЕДРА
+                        .block-text-insides
+                            .block-text-inside_title МЯКОТЬ БЕДРА
+                            .block-text-inside_txt в имбирном соусе от «Петрухи»
+                    .block-text-inside_outside
+                        .block-text-inside_outside-time
+                            span.icon-time
+                            | 40 мин
+                        .block-text-inside_outside-servings
+                            span.icon-servings
+                            | 4 порции
+
+                a(href='#').block-text-inside
+                    .wrapper-text-inside(style='background-image:url("img/recipe/Bitmap3.jpg")')
+                        .block-info_text-section МЯКОТЬ БЕДРА
+                        .block-text-insides
+                            .block-text-inside_title МЯКОТЬ БЕДРА
+                            .block-text-inside_txt с баклажанами по-азиатски от «Петрухи»
+                    .block-text-inside_outside
+                        .block-text-inside_outside-time
+                            span.icon-time
+                            | 60 мин
+                        .block-text-inside_outside-servings
+                            span.icon-servings
+                            | 2 порции
+
+
+                a(href='#').block-text-inside
+                    .wrapper-text-inside(style='background-image:url("img/recipe/Bitmap4.jpg")')
+                        .block-info_text-section КУРИНЫЕ ГУЗКИ
+                        .block-text-insides
+                            .block-text-inside_title КУРИНЫЕ ГУЗКИ
+                            .block-text-inside_txt в кисло-сладком соусу от «Петрухи»
+                    .block-text-inside_outside
+                        .block-text-inside_outside-time
+                            span.icon-time
+                            | 60 мин
+                        .block-text-inside_outside-servings
+                            span.icon-servings
+                            | 2 порции
+
+                a(href='#').block-text-inside
+                    .wrapper-text-inside(style='background-image:url("img/recipe/Bitmap5.jpg")')
+                        .block-info_text-section КУРИНЫЕ ШЕИ
+                        .block-text-insides
+                            .block-text-inside_title КУРИНЫЕ ШЕИ
+                            .block-text-inside_txt со сметанно-горчичным соусом  от «Петрухи»
+                    .block-text-inside_outside
+                        .block-text-inside_outside-time
+                            span.icon-time
+                            | 60 мин
+                        .block-text-inside_outside-servings
+                            span.icon-servings
+                            | 2 порции
+
+                a(href='#').block-text-inside
+                    .wrapper-text-inside(style='background-image:url("img/recipe/Bitmap6.jpg")')
+                        .block-info_text-section КУРИНЫЕ КРЫЛЬЯ
+                        .block-text-insides
+                            .block-text-inside_title КУРИНЫЕ КРЫЛЬЯ
+                            .block-text-inside_txt в медово-соевом маринаде от «Петрухи»
+                    .block-text-inside_outside
+                        .block-text-inside_outside-time
+                            span.icon-time
+                            | 60 мин
+                        .block-text-inside_outside-servings
+                            span.icon-servings
+                            | 2 порции

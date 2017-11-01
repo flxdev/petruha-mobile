@@ -306,7 +306,7 @@ h1{
   background-color: #eb1c24;
   position: fixed;
   top: 91px;
-  z-index: 3;
+  z-index: 4;
   .block-menu-nav{
     @include fontTTRoundsCondensedR;
     font-size: 23px;
@@ -1299,4 +1299,12 @@ h1{
   background-color: #e1e1e1!important;
   color: #fff;
   pointer-events: none;
+}
+
+.sm-none{
+  display: none;
+}
+
+.xs-none{
+  display: block;
 }

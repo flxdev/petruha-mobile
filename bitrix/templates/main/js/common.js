@@ -327,6 +327,119 @@ function initTabs() {
     })
 }
 
+function initSelectMulti() {
+    window.test = $('.filter-sel').SumoSelect({
+        csvDispCount: 1,
+        okCancelInMulti: true,
+        isClickAwayOk: false,
+        captionFormat : '{0}',
+        captionFormatAllSelected: '{0}',
+        locale :  ['Применить', 'Очистить', 'Select All'],
+        forceCustomRendering: true,
+        nativeOnDevice : [ ' Android ' , ' BlackBerry ' , ' iPhone ' , ' IPAD ' , ' IPOD ' , ' Opera Mini ' , ' IEMobile ' , ' Silk ' ],
+    });
+
+    $('.btnCancel').on('click', function(){
+        var numberFilter = $(this).closest('.SumoSelect').find('.filter-sel').data("number-filter");
+        var thisClear = $(this).closest('.SumoSelect').find('.SelectBox').hasClass('filter-true');
+        if(thisClear === true){
+            $(this).closest('.SumoSelect').find('.SelectBox').removeClass('filter-true');
+            $(this).closest('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
+            $(this).closest('.button-dropdown').find('.filter-clear').removeClass('open-clear')
+        }
+        $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
+        // ajaxFilter($(this));
+    });
+
+    $('.filter-clear').on('click', function(){
+        var numberFilter = $(this).closest('.block-filter').find('.filter-sel').data("number-filter");
+        var openClear = $(this).closest('.block-filter').find('.filter-clear').hasClass('open-clear');
+        if(openClear === true){
+            $(this).closest('.block-filter').find('.filter-clear').removeClass('open-clear');
+            $(this).closest('.block-filter').find('.SelectBox').removeClass('filter-true');
+            $(this).closest('.block-filter').find('.SelectBox > label').removeClass('filter-clear-this');
+        }
+        $('.filter-sel')[numberFilter].sumo.unSelectAll(i);
+
+        if($('.open-clear').length < 1){
+            $('.button-reset-filter').removeClass('open-reset-filter');
+        }
+        // ajaxFilter($(this));
+    });
+
+    $('.button-reset-filter').on('click', function(){
+        var num = $('.SumoSelect').length;
+
+        $('.SumoSelect').find('.SelectBox').removeClass('filter-true');
+        $('.SumoSelect').find('.SelectBox > label').removeClass('filter-clear-this');
+        $('.block-filter').find('.filter-clear').removeClass('open-clear');
+        $('.button-reset-filter').removeClass('open-reset-filter');
+        for(var i=0; i<num; i++){
+            $('.filter-sel')[i].sumo.unSelectAll(i);
+        }
+        // ajaxFilter($(this));
+    });
+
+    $('.btnOk').on('click', function () {
+        var searchClass = $(this).closest('.SumoSelect').find('.SelectBox > span').hasClass('placeholder');
+        var filterTxt = $(this).closest('.SumoSelect').find('.filter-sel').data("filter-txt");
+        if (searchClass === true){
+            $(this).closest('.button-dropdown').find('.SelectBox').removeClass('filter-true');
+            $(this).closest('.button-dropdown').find('.SelectBox > label').removeClass('filter-clear-this');
+            $(this).closest('.button-dropdown').find('.filter-clear').removeClass('open-clear')
+        } else {
+            $(this).closest('.button-dropdown').find('.SelectBox').addClass('filter-true');
+            $(this).closest('.button-dropdown').find('.SelectBox > label').addClass('filter-clear-this');
+            $(this).closest('.button-dropdown').find('.filter-true > span').attr('data-before',filterTxt);
+            $(this).closest('.button-dropdown').find('.filter-clear').addClass('open-clear');
+            $('.button-reset-filter').addClass('open-reset-filter');
+        }
+        // ajaxFilter($(this));
+    });
+
+    $('.block-filter select').each(function (i, select) {
+        if(!select.value.length) return;
+        var dataText = $(select).attr('data-filter-txt');
+        $(select).closest('.SumoSelect').find('.SelectBox').addClass('filter-true');
+        $(select).closest('.SumoSelect').find('.SelectBox > span').attr('data-before',dataText);
+        $(select).closest('.button-dropdown').find('.filter-clear').addClass('open-clear');
+        $('.button-reset-filter').addClass('open-reset-filter');
+    });
+}
+
+function initProductSelect(){
+
+    $('.btn-click').on('click', function () {
+        var searchClass = $(this).closest('.block-product-brand').hasClass('grin');
+        if(searchClass === true){
+            $(this).closest('.block-product-brand').removeClass('grin');
+            $(this).closest('.block-product-brand').addClass('blue');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.grin').removeClass('grin');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.grin').addClass('blue');
+        } else{
+            $(this).closest('.block-product-brand').removeClass('blue');
+            $(this).closest('.block-product-brand').addClass('grin');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.blue').removeClass('blue');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.blue').addClass('grin');
+        }
+    });
+
+    $('.swiper-pagination_list').on('click', function () {
+        var searchClass = $(this).closest('.block-product-brand').hasClass('grin');
+        if(searchClass === true){
+            $(this).closest('.block-product-brand').removeClass('grin');
+            $(this).closest('.block-product-brand').addClass('blue');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.grin').removeClass('grin');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.grin').addClass('blue');
+        } else{
+            $(this).closest('.block-product-brand').removeClass('blue');
+            $(this).closest('.block-product-brand').addClass('grin');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.blue').removeClass('blue');
+            $(this).closest('.block-product-brand').find('.block-product-brand > .block-state.blue').addClass('grin');
+        }
+    });
+}
+
 
 initSwiperHeader();
 initDropzoneCompany();
@@ -350,4 +463,6 @@ document.addEventListener('DOMContentLoaded', function () {
     initProductionCycle();
     initCycleSchedule();
     initTabs();
+    initSelectMulti();
+    initProductSelect();
 });

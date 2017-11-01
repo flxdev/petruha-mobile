@@ -1,4 +1,4 @@
-section.container-block-info.gray.animateThis(data-anim="fadeInUp")
+section.container-block-info.gray.xs-none
     .wrapper-central-unit
         .container-row
             .central-title
@@ -7,6 +7,19 @@ section.container-block-info.gray.animateThis(data-anim="fadeInUp")
             .container-sorting
                 label.txt-sorting Сортировать:
                 select.select-box.select2
+                    option(value='1') По популярности
+                    option(value='2') По цене
+                    option(value='3') По рейтингу
+section.container-block-info.filter-mobile.sm-none
+    .wrapper-filter-mobile
+        // Блок для фильтра
+        .container-filter-mobile.display-none
+
+        // Блок для сортировки
+        .container-sorting-mobile
+            .block-sorting-mobile
+                select.select
+                    option(value='' disabled selected hidden) Сортировать
                     option(value='1') По популярности
                     option(value='2') По цене
                     option(value='3') По рейтингу

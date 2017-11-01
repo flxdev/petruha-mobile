@@ -7,3 +7,5 @@
 //=include lib/dropzone.js
 
 //=include lib/slick.min.js
+
+//=include lib/jquery.sumoselect.min.js
