@@ -1,18 +1,77 @@
+section.container-block-info.filter-mobile.sm-none
+    .wrapper-filter-mobile
+        // Блок для фильтра
+        .container-filter-mobile
+            .btn-filter Фильтр
+
+
+        // Блок для сортировки
+        .container-sorting-mobile
+            .block-sorting-mobile
+                select.select
+                    option(value='' disabled selected hidden) Сортировать
+                    option(value='1') По популярности
+                    option(value='2') По цене
+                    option(value='3') По рейтингу
+
+    form.container-filter-mobile-list
+
+        .block-select-filter
+            .block-select
+                label Состояние
+                select(multiple="multiple").select-btn
+                    option(disabled="disabled" value="-1") Состояние
+                    option(value='Голень') Состояние 1
+                    option(value='Бедро') Состояние 2
+                    option(value='Филе') Состояние 3
+                    option(value='Крыло') Состояние 4
+                    option(value='Состояние 5') Состояние 5
+                    option(value='Состояние 6') Состояние 6
+                    option(value='Состояние 7') Состояние 7
+            .block-select-length
+
+                .block-number-length
+                .block-clear-length.btn-clear-length
+                    i
+
+        .block-select-filter
+            .block-select
+                label Глубина переработки
+                select(multiple="multiple").select-btn
+                    option(disabled="disabled" value="-1") Глубина переработки
+                    option(value='Глубина переработки 1') Глубина переработки 1
+                    option(value='Глубина переработки 2') Глубина переработки 2
+                    option(value='Глубина переработки 3') Глубина переработки 3
+                    option(value='Глубина переработки 4') Глубина переработки 4
+                    option(value='Глубина переработки 5') Глубина переработки 5
+            .block-select-length
+
+                .block-number-length
+                .block-clear-length.btn-clear-length
+                    i
+
+        .block-btn-filter
+            .block-btn-filter_row
+                .btn-clear Очистить
+            .block-btn-filter_row
+                button.btn-enter Применить
+
+
 section.container-central-unit.gray
     .wrapper-central-unit
         .container-row
-            a(href='#').central-title
+            a(href='#').central-title.xs-none
                 span.central-title_txt Рецепты
                 span.central-title_icon
 
-            .container-sorting
+            .container-sorting.xs-none
                 label.txt-sorting Сортировать:
                 select.select-box.select2
                     option(value='1') По популярности
                     option(value='2') По цене
                     option(value='3') По рейтингу
 
-            .container-filter
+            .container-filter.xs-none
                 .wrapper-filter
                     .wrapper-filter-multiple
                         span.wrapper-filter-title Фильтр:

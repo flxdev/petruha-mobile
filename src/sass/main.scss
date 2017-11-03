@@ -28,6 +28,7 @@ body{
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 h1{
@@ -40,6 +41,9 @@ h1{
 
 .body-hidden{
   overflow: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }
 
 .header{
@@ -63,7 +67,7 @@ h1{
 .block-menu-header{
   width: 100%;
   background-color: white;
-  overflow-y: scroll;
+  overflow-y: auto;
   position: fixed;
   height: 100%;
   //top: 90px;
@@ -71,6 +75,7 @@ h1{
   z-index: 3;
   padding-bottom: 90px;
   transition: all 0.8s ease-out;
+  -webkit-overflow-scrolling:touch;
 }
 
 .block-menu-header-list{
@@ -174,7 +179,7 @@ h1{
   background-size: contain;
   position: absolute;
   top: 34px;
-  right: 52px;
+  right: 40px;
   transition: all .2s ease-out;
 }
 
@@ -331,27 +336,35 @@ h1{
     }
   }
   .block-menu-list{
-    padding: 20px 44px 50px 44px;
-    position: absolute;
+    position: fixed;
     //top: 58px;
     top: -1000%;
-    background-color: #eb1c24;
     width: 100%;
     transition: all 0.5s ease-out;
-    .block-menu-list_list{
-      @include fontTTRoundsCondensedB;
-      font-size: 24px;
-      font-stretch: condensed;
-      line-height: 3.33;
-      text-align: center;
-      color: #fffcfc;
-      text-transform: uppercase;
-      display: block;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-      &:last-child{
-        border-bottom: none;
+    overflow-y: auto;
+    position: fixed;
+    height: 100%;
+    padding-bottom: 150px;
+    -webkit-overflow-scrolling:touch;
+    .wrapper-menu-list{
+      background-color: #eb1c24;
+      padding: 20px 44px 20px 44px;
+      .block-menu-list_list{
+        @include fontTTRoundsCondensedB;
+        font-size: 24px;
+        font-stretch: condensed;
+        line-height: 3.33;
+        text-align: center;
+        color: #fffcfc;
+        text-transform: uppercase;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        &:last-child{
+          border-bottom: none;
+        }
       }
     }
+
   }
 }
 
@@ -774,6 +787,18 @@ h1{
         }
       }
     }
+    .form-error{
+      @include fontOpenSans300;
+      font-size: 14px;
+      line-height: 1.71;
+      color: #eb1c24;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    .input-box.error, .textarea-box.error{
+      border: 1px solid #eb1c24;
+    }
   }
   .btn-change-pass{
     text-align: right;
@@ -973,6 +998,7 @@ h1{
   z-index: 5;
   overflow-y: auto;
   transition: all .4s ease-out;
+  -webkit-overflow-scrolling: touch;
 }
 
 .btn-close{
@@ -1307,4 +1333,17 @@ h1{
 
 .xs-none{
   display: block;
+}
+
+.overlow-bg{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  pointer-events: none;
+  position: fixed;
+  z-index: 3;
 }

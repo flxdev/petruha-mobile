@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Jade Layout Template</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" media="all" href="css/screen.min.css">
     <script src="https://yastatic.net/share2/share.js"></script>
@@ -20,14 +20,18 @@
         <div class="block-menu open-menu"></div>
       </div>
       <div class="block-menu-header">
-        <div class="block-menu-header-list"><a class="block-menu-header-list_list" href="#">Компания</a><a class="block-menu-header-list_list" href="#">100% качества</a><a class="block-menu-header-list_list" href="#">Продукты</a><a class="block-menu-header-list_list" href="#">Рецепты</a><a class="block-menu-header-list_list" href="#">Акции</a><a class="block-menu-header-list_list" href="#">Контакты</a><a class="block-menu-header-list_list" href="#">Поиск</a><a class="block-menu-header-list_list" href="#">Рецепты</a><a class="block-menu-header-list_list" href="#">Акции</a><a class="block-menu-header-list_list" href="#">Контакты</a><a class="block-menu-header-list_list" href="#">Поиск</a></div><a class="block-menu-header_lk js-btn" href="#" data-popup="lk"><span>Личный кабинет</span></a>
+        <div class="block-menu-header-list"><a class="block-menu-header-list_list" href="#">Компания</a><a class="block-menu-header-list_list" href="#">100% качества</a><a class="block-menu-header-list_list" href="#">Продукты</a><a class="block-menu-header-list_list" href="#">Рецепты</a><a class="block-menu-header-list_list" href="#">Акции</a><a class="block-menu-header-list_list" href="#">Контакты</a><a class="block-menu-header-list_list" href="#">Поиск</a>
+          <!--a(href="#").block-menu-header_lk.js-btn(data-popup="lk") <span>Личный кабинет</span>-->
+        </div>
       </div>
     </header>
     <div class="container-menu-nav">
       <div class="block-menu-nav">Продукты
         <div class="icon-prev"></div>
       </div>
-      <div class="block-menu-list"><a class="block-menu-list_list" href="#">Петруха</a><a class="block-menu-list_list" href="#">Петруха Микс</a><a class="block-menu-list_list" href="#">Петруха Мастер</a><a class="block-menu-list_list" href="#">Петруха Просто</a><a class="block-menu-list_list" href="#">Петруха Халяль</a></div>
+      <div class="block-menu-list">
+        <div class="wrapper-menu-list"><a class="block-menu-list_list" href="#">Петруха</a><a class="block-menu-list_list" href="#">Петруха Микс</a><a class="block-menu-list_list" href="#">Петруха Мастер</a><a class="block-menu-list_list" href="#">Петруха Просто</a><a class="block-menu-list_list" href="#">Петруха Халяль</a></div>
+      </div>
     </div>
     <div class="container-white-block">
       <div class="btn-close js-close"></div>
@@ -220,10 +224,75 @@
                 <h1>Петруха</h1>
               </div>
             </div>
+            <section class="container-block-info filter-mobile sm-none">
+              <div class="wrapper-filter-mobile">
+                <!-- Блок для фильтра-->
+                <div class="container-filter-mobile">
+                  <div class="btn-filter">Фильтр</div>
+                </div>
+                <!-- Блок для сортировки-->
+                <div class="container-sorting-mobile">
+                  <div class="block-sorting-mobile">
+                    <select class="select">
+                      <option value="" disabled selected hidden>Сортировать</option>
+                      <option value="1">По популярности</option>
+                      <option value="2">По цене</option>
+                      <option value="3">По рейтингу</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <form class="container-filter-mobile-list">
+                <div class="block-select-filter">
+                  <div class="block-select">
+                    <label>Состояние</label>
+                    <select class="select-btn" multiple="multiple">
+                      <option disabled="disabled" value="-1">Состояние</option>
+                      <option value="Голень">Состояние 1</option>
+                      <option value="Бедро">Состояние 2</option>
+                      <option value="Филе">Состояние 3</option>
+                      <option value="Крыло">Состояние 4</option>
+                      <option value="Состояние 5">Состояние 5</option>
+                      <option value="Состояние 6">Состояние 6</option>
+                      <option value="Состояние 7">Состояние 7</option>
+                    </select>
+                  </div>
+                  <div class="block-select-length">
+                    <div class="block-number-length"></div>
+                    <div class="block-clear-length btn-clear-length"><i></i></div>
+                  </div>
+                </div>
+                <div class="block-select-filter">
+                  <div class="block-select">
+                    <label>Глубина переработки</label>
+                    <select class="select-btn" multiple="multiple">
+                      <option disabled="disabled" value="-1">Глубина переработки</option>
+                      <option value="Глубина переработки 1">Глубина переработки 1</option>
+                      <option value="Глубина переработки 2">Глубина переработки 2</option>
+                      <option value="Глубина переработки 3">Глубина переработки 3</option>
+                      <option value="Глубина переработки 4">Глубина переработки 4</option>
+                      <option value="Глубина переработки 5">Глубина переработки 5</option>
+                    </select>
+                  </div>
+                  <div class="block-select-length">
+                    <div class="block-number-length"></div>
+                    <div class="block-clear-length btn-clear-length"><i></i></div>
+                  </div>
+                </div>
+                <div class="block-btn-filter">
+                  <div class="block-btn-filter_row">
+                    <div class="btn-clear">Очистить</div>
+                  </div>
+                  <div class="block-btn-filter_row">
+                    <button class="btn-enter">Применить</button>
+                  </div>
+                </div>
+              </form>
+            </section>
             <section class="container-central-unit gray">
               <div class="wrapper-central-unit">
-                <div class="container-row"><a class="central-title" href="#"><span class="central-title_txt">Рецепты</span><span class="central-title_icon"></span></a>
-                  <div class="container-sorting">
+                <div class="container-row"><a class="central-title xs-none" href="#"><span class="central-title_txt">Рецепты</span><span class="central-title_icon"></span></a>
+                  <div class="container-sorting xs-none">
                     <label class="txt-sorting">Сортировать:</label>
                     <select class="select-box select2">
                       <option value="1">По популярности</option>
@@ -231,7 +300,7 @@
                       <option value="3">По рейтингу</option>
                     </select>
                   </div>
-                  <div class="container-filter">
+                  <div class="container-filter xs-none">
                     <div class="wrapper-filter">
                       <div class="wrapper-filter-multiple"><span class="wrapper-filter-title">Фильтр:</span>
                         <div class="block-filter">
@@ -360,6 +429,7 @@
         <div class="wrapper-rights-f">© 2017 ТМ «Петруха»</div><a class="wrapper-dev-f" href="#">Разработка сайта:<span>Flex Media</span></a>
       </div>
     </footer>
+    <div class="overlow-bg"></div>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">
     <script src="js/lib.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>

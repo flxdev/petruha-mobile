@@ -984,6 +984,11 @@ $units: 1px !default;
       margin-bottom: 5px;
     }
   }
+  .container-menu-nav {
+    .block-menu-nav{
+      padding: 14px 30px 17px;
+    }
+  }
 }
 
 @media all and (max-width: 600px){

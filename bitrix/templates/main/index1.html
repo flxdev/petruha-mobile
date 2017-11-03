@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Jade Layout Template</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <link rel="stylesheet" media="all" href="css/screen.min.css">
     <script src="https://yastatic.net/share2/share.js"></script>
@@ -20,14 +20,18 @@
         <div class="block-menu open-menu"></div>
       </div>
       <div class="block-menu-header">
-        <div class="block-menu-header-list"><a class="block-menu-header-list_list" href="#">Компания</a><a class="block-menu-header-list_list" href="#">100% качества</a><a class="block-menu-header-list_list" href="#">Продукты</a><a class="block-menu-header-list_list" href="#">Рецепты</a><a class="block-menu-header-list_list" href="#">Акции</a><a class="block-menu-header-list_list" href="#">Контакты</a><a class="block-menu-header-list_list" href="#">Поиск</a><a class="block-menu-header-list_list" href="#">Рецепты</a><a class="block-menu-header-list_list" href="#">Акции</a><a class="block-menu-header-list_list" href="#">Контакты</a><a class="block-menu-header-list_list" href="#">Поиск</a></div><a class="block-menu-header_lk js-btn" href="#" data-popup="lk"><span>Личный кабинет</span></a>
+        <div class="block-menu-header-list"><a class="block-menu-header-list_list" href="#">Компания</a><a class="block-menu-header-list_list" href="#">100% качества</a><a class="block-menu-header-list_list" href="#">Продукты</a><a class="block-menu-header-list_list" href="#">Рецепты</a><a class="block-menu-header-list_list" href="#">Акции</a><a class="block-menu-header-list_list" href="#">Контакты</a><a class="block-menu-header-list_list" href="#">Поиск</a>
+          <!--a(href="#").block-menu-header_lk.js-btn(data-popup="lk") <span>Личный кабинет</span>-->
+        </div>
       </div>
     </header>
     <div class="container-menu-nav">
       <div class="block-menu-nav">Продукты
         <div class="icon-prev"></div>
       </div>
-      <div class="block-menu-list"><a class="block-menu-list_list" href="#">Петруха</a><a class="block-menu-list_list" href="#">Петруха Микс</a><a class="block-menu-list_list" href="#">Петруха Мастер</a><a class="block-menu-list_list" href="#">Петруха Просто</a><a class="block-menu-list_list" href="#">Петруха Халяль</a></div>
+      <div class="block-menu-list">
+        <div class="wrapper-menu-list"><a class="block-menu-list_list" href="#">Петруха</a><a class="block-menu-list_list" href="#">Петруха Микс</a><a class="block-menu-list_list" href="#">Петруха Мастер</a><a class="block-menu-list_list" href="#">Петруха Просто</a><a class="block-menu-list_list" href="#">Петруха Халяль</a></div>
+      </div>
     </div>
     <div class="container-white-block">
       <div class="btn-close js-close"></div>
@@ -525,6 +529,7 @@
         <div class="wrapper-rights-f">© 2017 ТМ «Петруха»</div><a class="wrapper-dev-f" href="#">Разработка сайта:<span>Flex Media</span></a>
       </div>
     </footer>
+    <div class="overlow-bg"></div>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,700,800&amp;subset=cyrillic" rel="stylesheet">
     <script src="js/lib.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
